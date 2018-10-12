@@ -1,0 +1,306 @@
+/*
+Copyright (c) 2013, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://yuilibrary.com/license/
+version: 3.18.1
+*/
+html{
+    color:#000;
+    background:#FFF;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin:0;
+    padding:0;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+fieldset,
+img {
+    border:0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style:normal;
+    font-weight:normal;
+}
+ 
+ol,
+ul {
+    list-style:none;
+}
+ 
+caption,
+th {
+    text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size:100%;
+    font-weight:normal;
+}
+q:before,
+q:after {
+    content:'';
+}
+abbr,
+acronym {
+    border:0;
+    font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+    vertical-align:text-top;
+}
+sub {
+    vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+    font-family:inherit;
+    font-size:inherit;
+    font-weight:inherit;
+    *font-size:100%; /*to enable resizing for IE*/
+}
+/*because legend doesn't inherit in IE */
+legend {
+    color:#000;
+}
+ 
+/*-------------------------------------------------------------------------*/
+ 
+html {
+    height: 100%;
+}
+ 
+body {
+    font-family: Arial, serif;
+    color: #444;
+    background: #F0F0F0;
+    min-height: 100%;
+}
+ 
+h1 {
+    padding: 15px;
+    font-size: 20px;
+    color: #F00;
+    text-align: center;
+}
+ 
+h2 {
+    color: #F00;
+    padding: 0 0 10px;
+}
+ 
+ 
+select {
+    border-radius: 5px;
+    padding: 5px 7px;
+    font-size: 16px;
+    border: 1px solid #B9B9B9;
+    margin-bottom: 10px;
+    vertical-align: baseline;
+    background: #F1F1F1;
+}
+ 
+input {
+    border-radius: 5px;
+    padding: 6px 7px;
+    font-size: 16px;
+    border: 1px solid #B9B9B9;
+    margin-bottom: 10px;
+    vertical-align: baseline;
+    background: #F1F1F1;
+}
+ 
+.header {
+    width: 100%;
+    background: #ea1b22;
+    text-align: center;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+ 
+.header__logo {
+    width: 300px;
+}
+ 
+@media (max-width: 300px) {
+    .header__logo {
+        width: 100%;
+    }
+}
+ 
+.content {
+    padding: 0 15px;
+}
+ 
+.section {
+    border: 1px solid #DEDEDE;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 0 10px;
+    overflow: hidden;
+    display: none;
+}
+ 
+.form {
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: auto;
+}
+ 
+.items {
+    background: url(items.png) 0 0 repeat-y;
+}
+ 
+.form > .item {
+    margin-left: 0;
+}
+ 
+.item {
+    padding: 0 0 0 25px;
+    background: url(item.png) 0 0 no-repeat;
+}
+ 
+.item:last-child {
+    background: url(item.png) 0 0 no-repeat #FFF;
+}
+ 
+.key {
+    display: inline-block;
+    font-weight: 700;
+    margin: 4px 0;
+}
+ 
+.clickable {
+    cursor: pointer;
+}
+ 
+.collapsed:after {
+    content: " ...";
+}
+ 
+.delimiter {
+    font-weight: 700;
+}
+ 
+.value {
+    display: inline-block;
+    background: none;
+    border: none;
+    font-size: 100%;
+    white-space: pre;
+    vertical-align: top;
+    margin: 4px 0;
+}
+ 
+select.value {
+    font-size: 16px;
+    height: 19px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #444;
+    padding: 0;
+    border-radius: 0;
+    vertical-align: baseline;
+}
+ 
+.writable {
+    border-bottom: 1px dashed black;
+    min-width: 60px;
+}
+ 
+.button {
+    display: inline-block;
+    padding: 7px 11px;
+    border: 1px solid #B9B9B9;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    background: #F0F0F0;
+    margin-bottom: 10px;
+    margin-right: 7px;
+}
+ 
+.button__generate_sign {
+    margin: 0;
+    font-weight: 400;
+    padding: 2px 7px;
+}
+ 
+.submit {
+    background: #ee3526;
+    color: #fff;
+    border-color: #B50000;
+}
+ 
+.json {
+    padding: 10px;
+    white-space: pre;
+    font-family: monospace;
+    border-radius: 5px;
+    margin: 0 0 10px;
+    background: #353535;
+    color: white;
+}
+ 
+.json__request {
+    display: none;
+}
+ 
+.json__response {
+    display: none;
+    background: #F0F0F0;
+    color: #444;
+    border: 1px solid #DEDEDE;
+}
+ 
+.back_method {
+    display: inline-block;
+}
+ 
+.back_activity_id {
+    display: none;
+}
